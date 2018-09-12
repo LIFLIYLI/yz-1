@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>king</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>  
+    <nav>
+        <img src="" alt="">
+        <div class="t">科技你好
+            <p>keji nihao</p>
+        </div>
+        <ul>
+            <li>关于我们<div></div></li>
+            <li>案例</li>
+            <li>企业服务<div></div></li>
+            <li>移动应用<div></div></li>
+            <li>代办服务<div></div></li>
+            <li>网站建设<div></div></li>
+            <li>首页</li>
+        </ul>
+    </nav>
+    <header>
+        <div>
+            <img src="./img/T`LGB1J)SIZQ9VCE$W)SHI0.png" alt="">
+            <img src="./img/%P`Q]Z%QT}MW%~O}$SDX}2E.png" alt="">
+            <img src="./img/title1_gaitubao_com_1920x694.jpg" alt="">
+        </div>
+    </header>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <footer>
+        <div class="bu"></div>
+        <img src="./img/未标题-2.jpg" alt="">
+        <div class="text">
+                <h2>联系我们</h2>
+                <p>设计是网站的灵魂，我们坚持有创意设计，给您想要的！</p>
+                
+                <div class="kuai clearfix">
+                    <div>
+                        <p>来电咨询</p>
+                        <span>123-456-789</span>
+                    </div>
+                    <div>
+                        <p>QQ咨询</p>
+                        <span>123456789</span>
+                        </div>
+                    <div>
+                        <p>微信咨询</p>
+                        <span>123456789</span>
+                    </div> 
+                    <div>
+                        <p>旺旺咨询</p>
+                        <span>abcdefg</span>
+                    </div>
+                </div>
+                <div class="A">
+                    <a href="">定制1</a>
+                    <a href="">定制2</a>
+                    <br>
+                    <a href="">定制3</a>
+                    <a href="">定制4</a>
+                </div>           
+        </div>
+        
+    </footer>    
+    <end>
+        <p>科技信息你好</p>
+        <p>业务咨询：123456789</p>
+        <p>电话：123456789</p>
+        <hr>
+        <p>渝ABCDEFG</p>
+    </end>
+
+    <script>
+            var pageWidth=window.innerWidth/100
+        document.write('<style>html{font-size:' + pageWidth +'px;}</style>')
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+
+        $('header>div>img:nth-child(1)').addClass('current')
+        $('header>div>img:nth-child(1)').siblings().addClass('enter')
+         let n=1
+        function x(n){   
+            if(n>$('header>div>img').length){
+                n=n%$('header>div>img').length 
+                if(n===0){
+                    n=$('header>div>img').length
+                }      
+            }
+            return n     
+        }       
+        setInterval(()=>{
+            $(`header>div>img:nth-child(${x(n)})`).removeClass('current').addClass('leave').one('transitionend',(e)=>{
+        $(e.currentTarget).removeClass('leave').addClass('enter')
+        })
+            $(`header>div>img:nth-child(${x(n+1)})`).removeClass('enter').addClass('current')
+            n=n+1
+        },3000)
+        
+
+    </script>
+</body>
+</html>

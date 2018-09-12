@@ -1,0 +1,125 @@
+body{
+    margin: 0 0;
+    overflow-x:hidden
+}
+nav{
+    width: 100%;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    height: 5rem;
+    position: fixed;
+    color: whitesmoke;
+    z-index: 2;
+}
+nav>div.t{
+    position:absolute;
+    top:1rem;
+    left:2rem;
+}
+nav>ul>li{
+    float: right;
+    list-style: none;
+    margin: 0 1.5rem;
+    position: relative;
+}
+nav>ul>li>div{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border:0.5rem solid transparent;
+    border-top:0.7rem solid blueviolet;
+    position: absolute;
+    top:0.4rem;
+    right: -1rem;
+}
+
+header{
+    width: 80%;
+    height: 45rem;
+    position: relative;
+    overflow: hidden;
+}
+header>div>img{
+    display: block;
+    width: 100%;
+    height: 45rem;
+    position: absolute;
+    top:0;
+    left: 0;
+    transition:  all 1s;    
+
+}
+
+header>div>img.current{
+    transform:translateX(0);
+    z-index:1;
+}
+header>div>img.leave{
+    transform:translateX(-100%);
+    z-index:1;
+}
+header>div>img.enter{
+    transform:translateX(100%)
+}
+
+footer{
+    position: relative;
+}
+footer>div.bu{
+    width: 100%;
+    height: 32rem;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+footer>img{
+    width: 100%;
+    height: 32rem;
+}
+footer>div.text{
+    width: 100%;
+    display: block;
+    position: absolute;
+    top:4rem;
+    left: 0;
+    color: white;
+}
+footer>div.text>h2{
+    text-align: center;
+}
+footer>div.text>p{
+    text-align: center;
+    margin-bottom:3rem;
+}
+footer>div.text>div.kuai{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer>div.text>div.kuai.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+footer>div.text>div.kuai>div{
+    width: 16%;
+    float: left;
+    margin: 0 4rem;
+}
+footer>div.text>div.kuai>div>p{
+    margin: 0 0;
+}
+footer>div.text>div.A{
+    display: block;
+    margin-top:4rem;
+    
+}
+footer>div.text>div.A>a{
+    display: inline-block;
+    margin: 1rem 1rem;
+    margin-left: 8rem;
+    text-decoration: none;
+    color: white;
+}
